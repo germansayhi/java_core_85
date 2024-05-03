@@ -1,0 +1,5 @@
+git init: khơi tao
+git status
+git add [...]
+git commit -m [message]
+git remote set origin [https://github.com/germansayhi/java_core_85.git]
