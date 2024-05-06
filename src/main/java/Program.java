@@ -42,11 +42,11 @@ public class Program {
         account1.email = "test@gmail.com";
         account1.username= "a";
         account1.Fullname = "Nguyễn Văn A";
-        account1.DepartmentID = 1;
-        account1.PositionID = 1;
+        account1.Department = department1;
+        account1.Position = position1;
         LocalDate Datetime = LocalDate.of(2024, 5, 5);
         System.out.println("Tên nv" + account1.Accountid + " là : " + account1.username + " tên đầy đủ là: " + account1.Fullname );
-        System.out.println("Phòng ban nhân viên là: "+ account1.DepartmentID + " PositionID là: " +account1.PositionID);
+        System.out.println("Phòng ban nhân viên là: "+ account1.Department + " PositionID là: " +account1.Position);
         System.out.println("Ngày tao tài khoản là: "+ Datetime);
 
         Account account2 = new Account();
@@ -54,11 +54,11 @@ public class Program {
         account2.email = "abc@gmail.com";
         account2.username= "B";
         account2.Fullname = "Nguyễn Văn B";
-        account2.DepartmentID = 2;
-        account2.PositionID = 2;
+        account2.Department = department2;
+        account2.Position = position2;
         LocalDate Datetime2 = LocalDate.of(2022, 1, 5);
         System.out.println("Tên nv" + account2.Accountid + " là : " + account2.username + " tên đầy đủ là: " + account2.Fullname );
-        System.out.println("Phòng ban nhân viên là: "+ account2.DepartmentID + " PositionID là: " +account2.PositionID);
+        System.out.println("Phòng ban nhân viên là: "+ account2.Department + " PositionID là: " +account2.Position);
         System.out.println("Ngày tao tài khoản là: "+ Datetime2);
 
         Account account3 = new Account();
@@ -66,11 +66,11 @@ public class Program {
         account3.email = "cdf@gmail.com";
         account3.username= "C";
         account3.Fullname = "Ngyen Van C";
-        account3.DepartmentID = 3;
-        account3.PositionID = 3;
+        account3.Department = department3;
+        account3.Position = position3;
         LocalDate Datetime3 = LocalDate.of(2023, 11, 10);
         System.out.println("Tên nv" + account3.Accountid + " là : " + account3.username + " tên đầy đủ là: " + account3.Fullname );
-        System.out.println("Phòng ban nhân viên là: "+ account3.DepartmentID + " PositionID là: " +account3.PositionID);
+        System.out.println("Phòng ban nhân viên là: "+ account3.Department + " PositionID là: " +account3.Position);
         System.out.println("Ngày tao tài khoản là: "+ Datetime3);
         System.out.println("----------");
 
