@@ -1,5 +1,5 @@
 public class ExamQuestion {
-    int ExamID;
-    int QuestionID;
+    Exam ExamID;
+    Question QuestionID;
 
 }

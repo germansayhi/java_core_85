@@ -1,7 +1,7 @@
 public class Answer {
     int AnswerID;
     String Content;
-    int QuestionID;
+    Question QuestionID;
     isCorrect Iscorrect;
 
 }

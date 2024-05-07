@@ -1,5 +1,5 @@
 public class GroupAccount {
-    int GroupID;
-    int AccountID;
+     Group GroupID;
+     Account AccountID;
 
 }

@@ -2,7 +2,7 @@ public class Exam {
     int ExamID;
     int Code;
     String Title;
-    int CategoryID;
+    CategoryQuestion CategoryID;
     int Duration;
     int CreatorID;
 

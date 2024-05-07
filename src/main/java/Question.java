@@ -1,8 +1,10 @@
+import java.util.Locale;
+
 public class Question {
     int QuestionID;
     String Content;
-    int CategoryID;
-    int TypeID;
+   CategoryQuestion  CategoryID;
+    TypeQuestion TypeID;
     int CreatorID;
 
 
