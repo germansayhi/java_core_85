@@ -1,8 +1,6 @@
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
-public class Phone {
-    //protected ArrayList<Contact> contacts = new ArrayList<>();
-
+public abstract class Phone {
+    abstract void insertContact(String name, String phone);
+    abstract void removeContact(String name);
+    abstract void updateContact(String name, String newPhone);
+    abstract  void searchContact(String name);
 }
-
