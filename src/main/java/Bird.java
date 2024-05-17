@@ -1,4 +1,4 @@
-public class Bird extends Animals implements Flyable, java.lang.Runnable {
+public class Bird extends Animals implements Flyable, Runnable {
     @Override
     public void makeSound() {
         System.out.println("chip");
@@ -11,6 +11,7 @@ public class Bird extends Animals implements Flyable, java.lang.Runnable {
 
     @Override
     public void run() {
+        System.out.println("bird can run...");
 
     }
 }
