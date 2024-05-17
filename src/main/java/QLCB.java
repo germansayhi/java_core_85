@@ -23,7 +23,9 @@ public class QLCB {
             }else if (menu.equals("4")) {
                 xoaCanBoTheoTen();
             }else if (menu.equals("5")) {
-                System.out.println("Vui long chon dung chuong trinh");
+               return;
+            }else {
+                System.out.println("Vui lòng chọn đúng chức năng");
             }
         }
     }
@@ -44,7 +46,7 @@ public class QLCB {
         System.out.println("Nhap vao ho va ten can tim:");
         String hoTen = sc.nextLine();
         for(CanBo canBo : canBoList){
-            if(CanBo.hoTen.equals()){
+            if(canBo.hoTen.equals(hoTen)){
                 System.out.println(canBo);
             }
 
