@@ -97,7 +97,7 @@ public class QLCB {
 
     }
     private Kysu nhapVaoKySu() {
-        System.out.println("Mời bạn nhập vào thông tin công nhân.");
+        System.out.println("Mời bạn nhập vào thông tin ky su.");
         System.out.println("Nhập vào họ tên:");
         String hoTen = sc.nextLine();
         System.out.println("Nhập vào tuổi:");
@@ -122,7 +122,7 @@ public class QLCB {
         return new Kysu(hoTen, tuoi, gioiTinh, diaChi, nganhDaoTao);
     }
     private NhanVien nhapVaoNhanVien() {
-        System.out.println("Mời bạn nhập vào thông tin công nhân.");
+        System.out.println("Mời bạn nhập vào thông tin Nhan Vien.");
         System.out.println("Nhập vào họ tên:");
         String hoTen = sc.nextLine();
         System.out.println("Nhập vào tuổi:");
