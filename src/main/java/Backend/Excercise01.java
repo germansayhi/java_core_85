@@ -1,5 +1,7 @@
 package Backend;
 
+import Entity.PrimaryStudent;
+import Entity.SecondaryStudent;
 import Entity.Student;
 
 public class Excercise01 {
@@ -64,6 +66,25 @@ public class Excercise01 {
         System.out.println("s4 = " + s4);
         System.out.println("s5 = " + s5);
         System.out.println("Student.count = " + Student.count);
+
+    }
+    public static void question06(){
+        var primaryStudent = new PrimaryStudent("Nguyen Van A");
+        var primaryStudent1 = new PrimaryStudent("Nguyen Van G");
+        var SecondStudent2 = new SecondaryStudent("Nguyen Van F");
+        var SecondStudent3 = new SecondaryStudent("Nguyen Van E");
+        var SecondStudent4 = new SecondaryStudent("Nguyen Van D");
+        var SecondStudent5 = new SecondaryStudent("Nguyen Van C");
+
+        System.out.println("primaryStudent1 = " + primaryStudent1);
+        System.out.println("primaryStudent2 = " + SecondStudent2);
+        System.out.println("primaryStudent3 = " + SecondStudent3);
+        System.out.println("primaryStudent4 = " + SecondStudent4);
+        System.out.println("primaryStudent5 = " + SecondStudent5);
+        System.out.println("primaryStudent = " + primaryStudent);
+        System.out.println("PrimaryStudent.count = " + PrimaryStudent.count);
+    }
+    public static void question07(){
 
     }
 }
