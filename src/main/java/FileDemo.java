@@ -17,7 +17,5 @@ public class FileDemo {
         boolean delete1 = Filemanager.deleteFile("E:ra-86");
         System.out.println("delete "+delete);
 
-
-
     }
 }
