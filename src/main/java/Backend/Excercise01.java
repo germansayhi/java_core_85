@@ -1,8 +1,6 @@
 package Backend;
 
-import Entity.PrimaryStudent;
-import Entity.SecondaryStudent;
-import Entity.Student;
+import Entity.*;
 
 public class Excercise01 {
     public static void question01(){
@@ -85,7 +83,15 @@ public class Excercise01 {
         System.out.println("PrimaryStudent.count = " + PrimaryStudent.count);
     }
     public static void question07(){
-
+        try{
+            HinhTron s1 = new HinhTron(2);
+            HinhTron s2 = new HinhTron(4);
+            HinhChuNhat s3 = new HinhChuNhat(10,2);
+            HinhTron s4 = new HinhTron(3);
+            HinhTron s5 = new HinhTron(6);
+        } catch (HinhHocException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
 
