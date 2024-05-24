@@ -5,6 +5,7 @@ public class HinhChuNhat extends HinhHoc{
     private  double height;
 
     public HinhChuNhat(double wight, double height) throws HinhHocException {
+        super();
         this.wight = wight;
         this.height = height;
     }

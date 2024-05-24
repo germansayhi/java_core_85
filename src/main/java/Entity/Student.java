@@ -10,6 +10,9 @@ public class Student {
     public static int count;
 
     public Student(String name) {
+        if(count >=7){
+            throw new IllegalStateException("Toi da 7 hoc sinh");
+        }
         count++;
         this.id = count;
         this.name = name;

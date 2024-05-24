@@ -80,9 +80,11 @@ public class Excercise01 {
         System.out.println("primaryStudent4 = " + SecondStudent4);
         System.out.println("primaryStudent5 = " + SecondStudent5);
         System.out.println("primaryStudent = " + primaryStudent);
+        System.out.println("Student.count = " + Student.count);
         System.out.println("PrimaryStudent.count = " + PrimaryStudent.count);
+        System.out.println("SecondaryStudent.count = " + SecondaryStudent.count);
     }
-    public static void question07(){
+    public static void question08(){
         try{
             HinhTron s1 = new HinhTron(2);
             System.out.println("s1.tinhChuVi() = " + s1.tinhChuVi());
@@ -99,12 +101,16 @@ public class Excercise01 {
             HinhTron s5 = new HinhTron(6);
             System.out.println("s5.tinhDienTich() = " + s5.tinhDienTich());
             System.out.println("s5.tinhChuVi() = " + s5.tinhChuVi());
+
         } catch (HinhHocException e) {
             System.out.println(e.getMessage());
         }
 
     }
-}
+
+
+    }
+
 
 
 

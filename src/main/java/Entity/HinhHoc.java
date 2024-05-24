@@ -1,7 +1,7 @@
 package Entity;
 
 public abstract class HinhHoc extends Configs {
-    private static int soLuongHinh = 0;
+    private static int soLuongHinh;
 
     public HinhHoc() throws HinhHocException {
         if (soLuongHinh >= Configs.SO_LUONG_HINH_TOI_DA) {
@@ -10,7 +10,7 @@ public abstract class HinhHoc extends Configs {
         soLuongHinh++;
     }
 
-    abstract double tinhChuVi();
+    public abstract double tinhChuVi();
 
-    abstract double tinhDienTich();
+    public abstract double tinhDienTich();
 }
