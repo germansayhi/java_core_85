@@ -1,11 +1,12 @@
 package Entity;
 
 public class HinhChuNhat extends HinhHoc{
-    private static double wight;
-    private static double height;
+    private  double wight;
+    private  double height;
 
-    public HinhChuNhat(double a, double b) throws HinhHocException {
-        super();
+    public HinhChuNhat(double wight, double height) throws HinhHocException {
+        this.wight = wight;
+        this.height = height;
     }
 
     public  double tinhChuVi(){

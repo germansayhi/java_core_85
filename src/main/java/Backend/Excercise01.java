@@ -85,13 +85,24 @@ public class Excercise01 {
     public static void question07(){
         try{
             HinhTron s1 = new HinhTron(2);
+            System.out.println("s1.tinhChuVi() = " + s1.tinhChuVi());
+            System.out.println("s1.tinhDienTich() = " + s1.tinhDienTich());
             HinhTron s2 = new HinhTron(4);
+            System.out.println("s2.tinhDienTich() = " + s2.tinhDienTich());
+            System.out.println("s2.tinhChuVi() = " + s2.tinhChuVi());
             HinhChuNhat s3 = new HinhChuNhat(10,2);
+            System.out.println("s3.tinhChuVi() = " + s3.tinhChuVi());
+            System.out.println("s3.tinhDienTich() = " + s3.tinhDienTich());
             HinhTron s4 = new HinhTron(3);
+            System.out.println("s4 = " + s4.tinhChuVi());
+            System.out.println("s4.tinhDienTich() = " + s4.tinhDienTich());
             HinhTron s5 = new HinhTron(6);
+            System.out.println("s5.tinhDienTich() = " + s5.tinhDienTich());
+            System.out.println("s5.tinhChuVi() = " + s5.tinhChuVi());
         } catch (HinhHocException e) {
             System.out.println(e.getMessage());
         }
+
     }
 }
 
