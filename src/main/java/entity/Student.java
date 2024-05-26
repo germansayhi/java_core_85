@@ -6,8 +6,9 @@ public class Student {
 
     public static int count;
 
-    public Student(int id, String name) {
-        this.id = count++;
+    public Student( String name) {
+        count++;
+        this.id = count;
         this.name = name;
     }
 
@@ -17,10 +18,6 @@ public class Student {
 
     public String getName() {
         return name;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public void setName(String name) {
