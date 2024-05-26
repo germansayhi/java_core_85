@@ -57,6 +57,10 @@ public class Excercise01 {
             System.out.println("ID: " + student.getId() + " Name: " + student.getName());
         }
         System.out.println("cau j");
+        students.remove(5);
+        for (Student student : students) {
+            System.out.println("ID: " + student.getId() + " Name: " + student.getName());
+        }
     }
 
     public static Student findStudentByID(ArrayList<Student> students, int id) {
@@ -67,7 +71,6 @@ public class Excercise01 {
         return null;
 
     }
-
     public static Student findStudentByName(ArrayList<Student> students, String name) {
         for (Student student : students) {
             if (student.getName() == name) ;
