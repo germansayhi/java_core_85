@@ -8,15 +8,15 @@ import java.util.Map;
 public class Excercise01 {
     public static void Question01() {
         ArrayList<Student> students = new ArrayList<>();
-        students.add(new Student("Khoa"));
-        students.add(new Student("Duke"));
-        students.add(new Student("Duk"));
-        students.add(new Student("Duck"));
-        students.add(new Student("Duke"));
-        students.add(new Student("Duk"));
-        students.add(new Student("Duc"));
-        students.add(new Student("Duke"));
-        students.add(new Student("Duk"));
+        students.add(new Student("A"));
+        students.add(new Student("B"));
+        students.add(new Student("C"));
+        students.add(new Student("D"));
+        students.add(new Student("E"));
+        students.add(new Student("F"));
+        students.add(new Student("G"));
+        students.add(new Student("D"));
+        students.add(new Student("D"));
         for (Student student : students) {
             System.out.println("ID: " + student.getId() + " Name: " + student.getName());
         }
@@ -34,13 +34,13 @@ public class Excercise01 {
         System.out.println("Lastname.getName() = " + Lastname.getName());
 
         System.out.println("cau d");
-        students.add(0, new Student("AAAAAA"));
+        students.add(0, new Student("Q"));
         for (Student student : students) {
             System.out.println("ID: " + student.getId() + " Name: " + student.getName());
         }
 
         System.out.println("cau e");
-        students.add(new Student("BBBBB"));
+        students.add(new Student("K"));
         if (!students.isEmpty()) {
             Student last = students.get(students.size() - 1);
             System.out.println("last.getName() = " + last.getName());
