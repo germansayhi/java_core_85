@@ -9,8 +9,9 @@ import java.util.Stack;
 
 public class Program01 {
     public static void main(String[] args) {
-        Excercise01.Question01();
+        //Excercise01.Question01();
        // Question02.Question2();
+        Excercise01.Question06();
 
 
     }
