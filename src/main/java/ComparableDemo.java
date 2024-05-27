@@ -16,9 +16,6 @@ public class ComparableDemo  {
         Collections.sort(dog1);
         for (Dog dog : dog1) {
             System.out.println("dog = " + dog);
-
         }
-
     }
-
 }

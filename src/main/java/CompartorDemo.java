@@ -20,9 +20,6 @@ public class CompartorDemo {
         Collections.sort(cats,comparator);
         for (Cat cat : cats) {
             System.out.println(cat);
-
         }
-
-
     }
 }
