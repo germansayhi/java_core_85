@@ -41,12 +41,6 @@ public class Excercise01 {
 
         System.out.println("cau e");
         students.add(new Student("K"));
-        if (!students.isEmpty()) {
-            Student last = students.get(students.size() - 1);
-            System.out.println("last.getName() = " + last.getName());
-        } else {
-            System.out.println("Danh sach trong");
-        }
         for (Student student : students) {
             System.out.println("ID: " + student.getId() + " Name: " + student.getName());
         }
@@ -57,7 +51,7 @@ public class Excercise01 {
             System.out.println("ID: " + student.getId() + " Name: " + student.getName());
         }
         System.out.println("cau j");
-        students.remove(5);
+        students.removeIf(student -> student.getId()==5 );
         for (Student student : students) {
             System.out.println("ID: " + student.getId() + " Name: " + student.getName());
         }
@@ -107,5 +101,20 @@ public class Excercise01 {
                 System.out.println("Name: " + entry.getKey() + ", Count: " + entry.getValue());
             }
         }
+    }
+    public static void showStudentSameName(List<Student> students){
+        List<Student> list1 = new LinkedList<>();
+        List<Student> list2 = new LinkedList<>();
+        for (Student student : students) {
+            String name = student.getName();
+            if(list1.contains(student)){
+              if(!list2.contains(student)){
+                  list2.add(student);
+              }
+            }else {
+                list1.add(student);
+            }
+        }
+        System.out.println(list2);
     }
 }

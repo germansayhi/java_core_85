@@ -10,7 +10,8 @@ import java.util.Stack;
 public class Program01 {
     public static void main(String[] args) {
         Excercise01.Question01();
-        Question02.Question2();
+       // Question02.Question2();
+
 
     }
 
