@@ -16,6 +16,9 @@ public class Student {
         public Gender(String value) {
             this.value = value;
         }
+        public void showInfo(){
+            System.out.println("Gender: " + value);
+        }
     }
 
 
