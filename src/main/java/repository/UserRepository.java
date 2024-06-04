@@ -59,4 +59,59 @@ public class UserRepository {
             }
         }
     }
+
+    public User findByEmailAndByPassWord(String email, String password) throws SQLException {
+        String sql ="{CALL find_by_email_and_password(?,?)}";
+        try(
+                Connection connection = JdbcUtil.getConnection();
+                CallableStatement cStmt = connection.prepareCall(sql);
+                ){
+            cStmt.setString(1,email);
+            cStmt.setString(2,password);
+            try(ResultSet rs = cStmt.executeQuery()){
+                if (rs.next()) {
+                    User user = new User();
+                    user.setId(rs.getInt("id"));
+                    user.setFullname(rs.getString("full_name"));
+                    user.setEmail(rs.getString("email"));
+                    user.setPassword(rs.getString("password"));
+                    String role = rs.getString("role");
+                    User.Role.valueOf(role);
+                    user.setRole(User.Role.valueOf(role));
+                    user.setProSkill(rs.getString("pro_skill"));
+                    user.setExpInYear(rs.getInt("exp_in_year"));
+                    return user;
+                }
+                return null;
+            }
+
+        }
+
+    }
+
+    public int Create(String fullName, String email) throws SQLException {
+        String sql = "INSERT INTO users( full_name, email) VALUES(?,?)";
+        try (
+                Connection connection = JdbcUtil.getConnection();
+                PreparedStatement pStmt = connection.prepareStatement(sql);
+                ){
+            pStmt.setString(1,fullName);
+            pStmt.setString(2,email);
+            return pStmt.executeUpdate();
+        }
+
+    }
+
+    public int deleteById (int id) throws SQLException {
+        String sql ="DELETE FROM users where id = ?";
+        try (
+                Connection connection = JdbcUtil.getConnection();
+                PreparedStatement pstmt = connection.prepareStatement(sql)
+        ){
+            pstmt.setInt(1,id);
+            return pstmt.executeUpdate();
+        }
+
+    }
+
 }
