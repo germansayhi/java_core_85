@@ -128,6 +128,4 @@ public class UserFunction {
         System.out.printf("Da xoa thanh cong %d user(s).%n",result);
 
     }
-
-
 }
