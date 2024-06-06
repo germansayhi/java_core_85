@@ -11,7 +11,7 @@ public class UserProgram {
         UserRepository repository = new UserRepository();
         UserFunction function = new UserFunction(repository);
         while (true){
-            System.out.println("Vui long chon chuc nang ban muon");
+            System.out.println("Vui long chon chuc nang ban muon ");
             System.out.println("1.Hien thi danh sach User");
             System.out.println("2.Tim kiem user theo id");
             System.out.println("3.Dang nhap");
