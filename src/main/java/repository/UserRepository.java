@@ -3,12 +3,14 @@ package repository;
 import entity.User;
 import util.JdbcUtil;
 
+import java.io.IOException;
 import java.sql.*;
 import java.util.LinkedList;
 import java.util.List;
 
-public class UserRepository {
-    public List<User> findAll() throws SQLException {
+public class UserRepository implements iUserRepository {
+    @Override
+    public List<User> findAll() throws SQLException, IOException {
         String sql = "select * from users";
         try(
                 Connection connection = JdbcUtil.getConnection();
@@ -34,7 +36,8 @@ public class UserRepository {
         }
     }
 
-    public User findById(int id) throws SQLException {
+    @Override
+    public User findById(int id) throws SQLException, IOException {
         String sql = "SELECT * FROM users WHERE id = ?";
         try(
                 Connection connection = JdbcUtil.getConnection();
@@ -60,7 +63,8 @@ public class UserRepository {
         }
     }
 
-    public User findByEmailAndByPassWord(String email, String password) throws SQLException {
+    @Override
+    public User findByEmailAndByPassWord(String email, String password) throws SQLException, IOException {
         String sql ="{CALL find_by_email_and_password(?,?)}";
         try(
                 Connection connection = JdbcUtil.getConnection();
@@ -89,7 +93,8 @@ public class UserRepository {
 
     }
 
-    public int Create(String fullName, String email) throws SQLException {
+    @Override
+    public int Create(String fullName, String email) throws SQLException, IOException {
         String sql = "INSERT INTO users( full_name, email) VALUES(?,?)";
         try (
                 Connection connection = JdbcUtil.getConnection();
@@ -102,7 +107,8 @@ public class UserRepository {
 
     }
 
-    public int deleteById (int id) throws SQLException {
+    @Override
+    public int deleteById(int id) throws SQLException, IOException {
         String sql ="DELETE FROM users where id = ?";
         try (
                 Connection connection = JdbcUtil.getConnection();

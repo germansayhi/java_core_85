@@ -14,7 +14,7 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (full_name        , email              , password  , role		 , pro_skill, exp_in_year)
-VALUES            ('Nguyễn Văn Khoa', 'khoa.nv@gmail.com', '123456Q' , 'EMPLOYEE', 'Java'   , NULL       ),
+VALUES            ('Nguyễn Văn Khoa', 'khoa.nv@gmail.com', '123456Q' , 'ADMIN', 'Java'   , NULL       ),
                   ('Nguyễn Ngọc Duy', 'duy.nn@gmail.com' , '123456Q' , 'ADMIN'   , NULL     , 10         );
 
 DROP PROCEDURE IF EXISTS find_by_email_and_password;
