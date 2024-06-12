@@ -11,49 +11,15 @@ public class UserController implements iUserService {
 
     private iUserService service;
 
-    /**
-     * @return Danh sách user trong database
-     * */
-
-    public List<User> findAll()  {
-        return service.findAll();
+    public List<User> findEmplyeeByProjectId(int projectId)  {
+        return service.findEmplyeeByProjectId(projectId);
     }
 
-
-    /**
-     * @param id khoa chin
-     * @return thong tin user
-     */
-    public User findById(int id) {
-        return service.findById(id);
+    public List<User> findManager() {
+        return service.findManager();
     }
 
-
-    /**
-     * @param email tai khoan
-     * @param password mat khaiu
-     * @return dang nhap thanh cong hoac tra ve null neu that bai
-     */
-    public User findByEmailAndByPassWord(String email, String password) {
-        return service.findByEmailAndByPassWord(email, password);
-    }
-
-
-    /**
-     * Cach dung:
-     * <pre>{@code
-     * controller.Create ("Bui QUang Duc", "bqd11@gmail.com")
-     * }
-     * @param fullName Ho va ten
-     * @param email dia chi lien lac
-     * @return
-     */
-    public int Create(String fullName, String email){
-        return service.Create(fullName,email);
-    }
-
-
-    public int deleteById(int id) {
-        return service.deleteById(id);
+    public User findMangerByEmailAndPassWord(String email, String password) {
+        return service.findMangerByEmailAndPassWord(email, password);
     }
 }

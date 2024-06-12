@@ -5,11 +5,6 @@ import repository.UserRepository;
 import repository.iUserRepository;
 import service.UserService;
 import service.iUserService;
-import util.JdbcUtil;
-import util.ScannerUtil;
-
-import java.io.IOException;
-import java.sql.SQLException;
 
 public class UserProgram {
     public static void main(String[] args)  {

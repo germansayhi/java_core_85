@@ -13,10 +13,11 @@ import java.util.List;
 public class UserService implements iUserService {
 
     private iUserRepository repository;
+
     @Override
-    public List<User> findAll()  {
+    public List<User> findEmplyeeByProjectId(int projectId) {
         try {
-            return repository.findAll();
+            return repository.findEmployeeByProjectId(projectId);
         } catch (SQLException | IOException e) {
             return List.of();
 
@@ -24,38 +25,20 @@ public class UserService implements iUserService {
     }
 
     @Override
-    public User findById(int id) {
+    public User findMangerByEmailAndPassWord(String email, String password){
         try {
-            return repository.findById(id);
-        } catch (SQLException | IOException e) {
-            return null;
-        }
-    }
-
-    @Override
-    public User findByEmailAndByPassWord(String email, String password){
-        try {
-            return repository.findByEmailAndByPassWord(email, password);
+            return repository.findMangerByEmailAndPassWord(email, password);
         } catch (SQLException | IOException e) {
            return null;
         }
     }
 
     @Override
-    public int Create(String fullName, String email){
+    public List<User> findManager() {
         try {
-            return repository.Create(fullName,email);
-        } catch (SQLException | IOException e) {
-            return 0;
-        }
-    }
-
-    @Override
-    public int deleteById(int id) {
-        try {
-            return repository.deleteById(id);
-        } catch (SQLException | IOException e) {
-            return 0;
+            return repository.findManager();
+        }catch (SQLException | IOException e){
+            return List.of();
         }
     }
 }
