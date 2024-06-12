@@ -14,8 +14,9 @@ public class User {
     private Role role;
     private String proSkill;
     private Integer expInYear;
+    private Integer projectId;
 
     public enum Role{
-        EMPLOYEE,ADMIN
+        MANAGER,EMPLOYEE
     }
 }

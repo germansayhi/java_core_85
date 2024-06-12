@@ -5,13 +5,11 @@ import entity.User;
 import java.util.List;
 
 public interface iUserService {
-    List<User> findAll();
+    List<User> findEmplyeeByProjectId(int projectId);
 
-    User findById(int id);
+    List<User> findManager();
 
-    User findByEmailAndByPassWord(String email, String password);
+    User findMangerByEmailAndPassWord(String email, String password);
 
-    int Create(String fullName, String email) ;
 
-    int deleteById(int id) ;
 }
