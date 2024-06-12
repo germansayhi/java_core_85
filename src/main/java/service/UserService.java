@@ -15,9 +15,9 @@ public class UserService implements iUserService {
     private iUserRepository repository;
 
     @Override
-    public List<User> findEmplyeeByProjectId(int projectId) {
+    public List<User> findEmployeeAndManagerByProjectId(int projectId) {
         try {
-            return repository.findEmployeeByProjectId(projectId);
+            return repository.findEmployeeAndManagerByProjectId(projectId);
         } catch (SQLException | IOException e) {
             return List.of();
 
@@ -25,20 +25,20 @@ public class UserService implements iUserService {
     }
 
     @Override
-    public User findMangerByEmailAndPassWord(String email, String password){
+    public User findAdminByEmailAndPassWord(String email, String password){
         try {
-            return repository.findMangerByEmailAndPassWord(email, password);
+            return repository.findAdminByEmailAndPassWord(email, password);
         } catch (SQLException | IOException e) {
            return null;
         }
     }
 
     @Override
-    public List<User> findManager() {
+    public int CreateEmployee(String fullname, String email) {
         try {
-            return repository.findManager();
-        }catch (SQLException | IOException e){
-            return List.of();
+            return repository.CreateEmployee(fullname, email);
+        } catch (SQLException | IOException e) {
+            return 0;
         }
     }
 }

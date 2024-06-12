@@ -17,6 +17,6 @@ public class User {
     private Integer projectId;
 
     public enum Role{
-        MANAGER,EMPLOYEE
+        MANAGER,EMPLOYEE,ADMIN
     }
 }
