@@ -15,30 +15,11 @@ public class UserService implements iUserService {
     private iUserRepository repository;
 
     @Override
-    public List<User> findEmployeeAndManagerByProjectId(int projectId) {
+    public User login(String email, String password){
         try {
-            return repository.findEmployeeAndManagerByProjectId(projectId);
-        } catch (SQLException | IOException e) {
-            return List.of();
-
-        }
-    }
-
-    @Override
-    public User findAdminByEmailAndPassWord(String email, String password){
-        try {
-            return repository.findAdminByEmailAndPassWord(email, password);
+            return repository.login(email,password);
         } catch (SQLException | IOException e) {
            return null;
-        }
-    }
-
-    @Override
-    public int CreateEmployee(String fullname, String email) {
-        try {
-            return repository.CreateEmployee(fullname, email);
-        } catch (SQLException | IOException e) {
-            return 0;
         }
     }
 }

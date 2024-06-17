@@ -8,15 +8,18 @@ import lombok.Setter;
 
 public class User {
     private Integer id;
-    private String fullname;
+    private String firstname;
+    private String lastname;
+    private Integer phone;
     private String email;
     private String password;
-    private Role role;
+    private Candidate Candidate;
     private String proSkill;
     private Integer expInYear;
     private Integer projectId;
+    private String graduationRank;
 
-    public enum Role{
-        MANAGER,EMPLOYEE,ADMIN
+    public enum Candidate{
+        EXPERIENCECANDIDATE,FRESHCANDIDATE
     }
 }

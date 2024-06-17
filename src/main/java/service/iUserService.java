@@ -2,15 +2,12 @@ package service;
 
 import entity.User;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 public interface iUserService {
-    List<User> findEmployeeAndManagerByProjectId(int projectId);
 
-
-    User findAdminByEmailAndPassWord(String email, String password);
-
-    int CreateEmployee(String fullname, String email);
-
+    User login(String email, String password);
 
 }
