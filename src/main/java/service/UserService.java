@@ -22,4 +22,22 @@ public class UserService implements iUserService {
            return null;
         }
     }
+
+    @Override
+    public int CreateFresherCandidate(String firstname, String lastname, Integer phone, String email, String password, String graduationRank)  {
+        try {
+            return repository.CreateFresherCandidate(firstname, lastname, phone, email, password,graduationRank);
+        } catch (SQLException | IOException e) {
+            return 0;
+        }
+    }
+
+    @Override
+    public int CrateExperienceCandidate(String firstname, String lastname, Integer phone, String email, String password, String proSkill, Integer exp) {
+        try{
+            return repository.CrateExperienceCandidate(firstname, lastname, phone, email, password, proSkill, exp);
+        }catch (SQLException | IOException e) {
+            return 0;
+        }
+    }
 }
