@@ -17,9 +17,12 @@ public class User {
     private String proSkill;
     private Integer expInYear;
     private Integer projectId;
-    private String graduationRank;
+    private GraduationRank graduationRank;
 
     public enum Candidate{
         EXPERIENCECANDIDATE,FRESHCANDIDATE
+    }
+    public enum GraduationRank{
+        EXCELLENCE, GOOD, FAIR, POOR
     }
 }

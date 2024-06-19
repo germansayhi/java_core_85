@@ -10,7 +10,7 @@ public class UserRepository implements iUserRepository {
 
     @Override
     public User login(String email, String password) throws SQLException, IOException {
-        String sql = "{CALL find_by_email_and_password(?,?)}";
+        String sql = "SELECT * FROM users where email =? and password = ?";
         try (
                 Connection connection = JdbcUtil.getConnection();
                 CallableStatement cStmt = connection.prepareCall(sql);
@@ -31,7 +31,8 @@ public class UserRepository implements iUserRepository {
                     user.setCandidate(User.Candidate.valueOf(Cadidate));
                     user.setProSkill(rs.getString("pro_skill"));
                     user.setExpInYear(rs.getInt("exp_in_year"));
-                    user.setGraduationRank(rs.getString("graduationRank"));
+                    String GraduationRank = rs.getString("graduationRank");
+                    User.GraduationRank.valueOf(GraduationRank);
                     return user;
                 }
                 return null;
@@ -59,7 +60,7 @@ public class UserRepository implements iUserRepository {
 
     @Override
     public int CrateExperienceCandidate(String firstname, String lastname, Integer phone, String email, String password, String proSkill, Integer exp) throws SQLException, IOException {
-        String sql = "INSERT INTO users( first_name,last_name,phone, email, password, pro_skill, exp_in_year) VALUES(?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO users( first_name,last_name,phone, email, password, pro_skill, exp_in_year,candidate) VALUES(?,?,?,?,?,?,?,'EXPERIENCECANDIDATE')";
         try (
                 Connection connection = JdbcUtil.getConnection();
                 PreparedStatement pStmt = connection.prepareStatement(sql);

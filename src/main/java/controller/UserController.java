@@ -4,9 +4,6 @@ import entity.User;
 import lombok.AllArgsConstructor;
 import service.iUserService;
 
-import java.io.IOException;
-import java.sql.SQLException;
-
 @AllArgsConstructor
 public class UserController implements iUserService {
     private iUserService service;

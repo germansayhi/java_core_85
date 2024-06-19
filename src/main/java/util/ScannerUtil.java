@@ -87,5 +87,42 @@ public class ScannerUtil {
         }
         return false;
     }
+    public static int intNumber(){
+        while (true){
+            int input =ScannerUtil.inputInt();
+        if(input <0 || input >10){
+            System.err.println("Vui lòng nhập lai;");
+        }else if(input >0 || input <=10) {
+            return input;
+        }
+        }
+    }
+    public static String inputPhoneNumber() {
+        while (true) {
+            boolean isNumber = true;
+            String number = ScannerUtil.inputString();
+
+            if (number.length() > 12 || number.length() < 9) {
+                isNumber = false;
+            }
+            if (number.charAt(0) != '0') {
+                isNumber = false;
+            }
+
+            // kiem tra co ki tu nao ko  phải la number ko
+            for (int i = 0; i < number.length(); i++) {
+                if (!Character.isDigit(number.charAt(i))) {
+                    isNumber = false;
+                    break;
+                }
+            }
+            if (isNumber == true) {
+                return number;
+            } else {
+                System.out.print("Nhập lại: ");
+            }
+        }
+    }
+
 
 }
